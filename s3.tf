@@ -11,5 +11,5 @@ resource "aws_s3_bucket_object" "subnet-data" {
 }
 
 output "subnet-api" {
-  value = aws_s3_bucket_object.subnet-data
+  value = aws_s3_bucket_object.subnet-data.id
 }

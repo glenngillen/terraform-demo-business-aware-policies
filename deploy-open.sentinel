@@ -1,0 +1,6 @@
+import "http"
+import "json"
+
+req = http.request("https://deploystatus.internal")
+resp = json.unmarshal(http.get(req).body)
+main = rule { resp["deploy_window_open"] is true }
