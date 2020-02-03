@@ -1,3 +1,7 @@
+# reserved-subnets.sentinel will check the set of
+# reserved CIDR ranges to ensure any subnets we are
+# setting up do not clash with any internal IP ranges
+
 import "http"
 import "json"
 import "sockaddr"

@@ -1,3 +1,7 @@
+# deploy-open.sentinel checks that a deployment window
+# is currently open and that we are allowed to make
+# changes to our infrastructure
+
 import "http"
 import "json"
 
