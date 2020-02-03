@@ -29,11 +29,6 @@ resource "aws_subnet" "us-east-1d" {
   cidr_block  = "172.31.64.0/20"
   availability_zone = "us-east-1d"
 }
-resource "aws_subnet" "us-east-1e" {
-  vpc_id      = var.vpc_id
-  cidr_block  = "10.0.0.0/16"
-  availability_zone = "us-east-1e"
-}
 resource "aws_subnet" "us-east-1f" {
   vpc_id      = var.vpc_id
   cidr_block  = "172.31.80.0/20"
