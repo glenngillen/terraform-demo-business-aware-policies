@@ -23,7 +23,7 @@ full_url = base_url + start_query + api_query
 
 no_close_hazardous_asteroids = func(asteroids) {
   is_safe = true
-  for asteroids as asteroid {
+  for asteroids else [] as asteroid {
     hazardous = asteroid["is_potentially_hazardous_asteroid"]
     approach_data = asteroid["close_approach_data"][0]
     distance = approach_data["miss_distance"]["miles"]
@@ -38,10 +38,10 @@ no_close_hazardous_asteroids = func(asteroids) {
         "is estimated to be up to " + string(max_diameter),
         "feet in diameter!\n",
         "And it's traveling " + string(mph) + " miles per hour!!!!\n",
-        "AHHHHHHH!!!!!!\n"
+        "AHHHHHHH!!!!!!\n",
       ]
 
-      print(strings.join(warning_message, " ")
+      print(strings.join(warning_message, " "))
       is_safe = false
     }
   }
