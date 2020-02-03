@@ -1,10 +1,10 @@
 variable "vpc_id" {
-  type    = "string"
+  type    = string
   default = "vpc-01e40d78"
 }
 
 variable "default-security-group" {
-  type    = "string"
+  type    = string
   default = "sg-2a1ea154"
 }
 
