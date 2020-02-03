@@ -1,0 +1,24 @@
+import "http"
+import "json"
+import "sockaddr"
+import "tfplan"
+
+req = http.request("https://demo-business-aware-policies.s3.amazonaws.com/subnets.json")
+resp = http.get(req).body
+data = json.unmarshal(resp)
+
+disallowed_cidr_blocks = data["reserved"]
+
+no_dissallowed_cidrs = rule {
+  all tfplan.resources.aws_subnet as _, subnets {
+    all subnets as _, subnet {
+      all disallowed_cidr_blocks as block {
+        not sockaddr.is_contained(block, subnet.applied.cidr_block)
+      }
+    }
+  }
+}
+
+main = rule { 
+  no_dissallowed_cidrs
+}
