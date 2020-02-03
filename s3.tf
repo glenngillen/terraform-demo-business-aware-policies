@@ -18,8 +18,8 @@ resource "aws_s3_bucket_object" "deploy-window-data" {
 }
 
 output "subnet-api" {
-  value = aws_s3_bucket_object.subnet-data.id
+  value = "${aws_s3_bucket.demo.bucket_domain_name}/${aws_s3_bucket_object.subnet-data.id}"
 }
 output "deploy-window-api" {
-  value = aws_s3_bucket_object.deploy-window-data.id
+  value = "${aws_s3_bucket.demo.bucket_domain_name}/${aws_s3_bucket_object.deploy-window-data.id}"
 }
