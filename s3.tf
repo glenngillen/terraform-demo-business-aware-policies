@@ -6,7 +6,7 @@ resource "aws_s3_bucket" "demo" {
 resource "aws_s3_bucket_object" "subnet-data" {
   key                    = "subnets.json"
   bucket                 = aws_s3_bucket.demo.id
-  content                = "{ \"reserved\": ['192.168.0.0/24']}"
+  content                = "{ \"reserved\": [\"192.168.0.0/24\"]}"
   acl                    = "public-read"
 }
 
