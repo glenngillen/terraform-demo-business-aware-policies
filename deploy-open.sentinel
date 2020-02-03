@@ -4,4 +4,6 @@ import "json"
 req = http.request("https://demo-business-aware-policies.s3.amazonaws.com/deploy.json")
 resp = http.get(req).body
 data = json.unmarshal(resp)
+print(data)
+print(data["deploy-window"])
 main = rule { data["deploy-window"] is true }
