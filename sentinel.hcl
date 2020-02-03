@@ -5,3 +5,7 @@ policy "deploy-open" {
 policy "reserved-subnets" {
     enforcement_level = "soft_mandatory"
 }
+
+policy "asteroids" {
+    enforcement_level = "soft_mandatory"
+}
