@@ -13,7 +13,7 @@ resource "aws_s3_bucket_object" "subnet-data" {
 resource "aws_s3_bucket_object" "deploy-window-data" {
   key                    = "deploy.json"
   bucket                 = aws_s3_bucket.demo.id
-  content                = "{ \"deploy-open\": false }"
+  content                = "{ \"deploy-open\": true }"
   acl                    = "public-read"
 }
 
