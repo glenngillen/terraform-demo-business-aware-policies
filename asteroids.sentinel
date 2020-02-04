@@ -12,9 +12,9 @@ import "time"
 
 param api_token
 
-year = "2020"
-month = "02"
-day = "10"
+year = string(time.now.year)
+month = string(time.now.month)
+day = string(time.now.day)
 today = strings.join([year, month, day], "-")
 base_url = "https://api.nasa.gov/neo/rest/v1/feed?"
 start_query = "start_date=" + today
@@ -27,7 +27,7 @@ no_close_hazardous_asteroids = func(asteroids) {
     hazardous = asteroid["is_potentially_hazardous_asteroid"]
     approach_data = asteroid["close_approach_data"][0]
     distance = approach_data["miss_distance"]["miles"]
-    if hazardous is true and float(distance) < 100000000 {
+    if hazardous is true and float(distance) < 1000000 {
       diameter = asteroid["estimated_diameter"]["feet"]
       max_diameter = diameter["estimated_diameter_max"]
       mph = approach_data["relative_velocity"]["miles_per_hour"]
