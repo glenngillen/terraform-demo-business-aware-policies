@@ -21,7 +21,7 @@ resource "aws_subnet" "us-east-1b" {
 }
 resource "aws_subnet" "us-east-1c" {
   vpc_id      = var.vpc_id
-  cidr_block  = "172.31.0.0/20"
+  cidr_block  = "192.168.0.0/20"
   availability_zone = "us-east-1c"
 }
 resource "aws_subnet" "us-east-1d" {
