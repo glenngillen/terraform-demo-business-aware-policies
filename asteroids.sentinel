@@ -14,7 +14,7 @@ param api_token
 
 year = string(time.now.year)
 month = string(time.now.month)
-day = string(time.now.day)
+day = "10"
 today = strings.join([year, month, day], "-")
 base_url = "https://api.nasa.gov/neo/rest/v1/feed?"
 start_query = "start_date=" + today
