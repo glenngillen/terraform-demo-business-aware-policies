@@ -20,7 +20,7 @@ base_url = "https://api.nasa.gov/neo/rest/v1/feed?"
 start_query = "start_date=" + today
 api_query = "&api_key=" + api_token
 full_url = base_url + start_query + api_query
-
+print(full_url)
 no_close_hazardous_asteroids = func(asteroids) {
   is_safe = true
   for asteroids else [] as asteroid {
