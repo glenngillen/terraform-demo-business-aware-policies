@@ -1,5 +1,5 @@
 policy "deploy-open" {
-    enforcement_level = "hard-mandatory"
+    enforcement_level = "advisory"
 }
 
 policy "reserved-subnets" {
