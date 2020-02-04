@@ -5,6 +5,7 @@
 import "http"
 import "json"
 
+
 req = http.request("https://demo-business-aware-policies.s3.amazonaws.com/deploy.json")
 resp = http.get(req).body
 data = json.unmarshal(resp)
