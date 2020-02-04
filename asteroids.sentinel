@@ -27,7 +27,7 @@ no_close_hazardous_asteroids = func(asteroids) {
     hazardous = asteroid["is_potentially_hazardous_asteroid"]
     approach_data = asteroid["close_approach_data"][0]
     distance = approach_data["miss_distance"]["miles"]
-    if hazardous is true and float(distance) < 1000000 {
+    if hazardous is true and float(distance) < 1000000000 {
       diameter = asteroid["estimated_diameter"]["feet"]
       max_diameter = diameter["estimated_diameter_max"]
       mph = approach_data["relative_velocity"]["miles_per_hour"]
